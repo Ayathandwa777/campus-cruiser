@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk
+        tools:overrideLibrary="com.google.firebase.auth" />
     <application
         android:label="campus_cruiser"
         android:name="${applicationName}"
