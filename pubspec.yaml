@@ -30,12 +30,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  firebase_core: ^2.32.0
-  cloud_firestore: ^3.5.1
-  google_maps_flutter: ^2.2.8
-  firebase_auth: ^4.16.0       # Optional (comment out if unused)
-  geolocator: ^9.0.2          # For GPS functions
-  flutter_polyline_points: ^1.0.0 # For drawing routes
+  
+  # Firebase packages from a compatible era (mid-2023)
+  firebase_core: ^2.14.0
+  firebase_auth: ^4.6.3
+  cloud_firestore: ^4.8.2
 
+  # Other packages we already fixed
+  google_maps_flutter: ^2.2.8
+  geolocator: ^9.0.2
+  flutter_polyline_points: ^1.0.0
 dev_dependencies:
   flutter_lints: ^2.0.0
