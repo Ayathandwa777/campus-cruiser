@@ -34,7 +34,7 @@ dependencies:
   cloud_firestore: ^4.17.0
   google_maps_flutter: ^2.5.3
   firebase_auth: ^4.16.0       # Optional (comment out if unused)
-  geolocator: ^13.0.4          # For GPS functions
+  geolocator: ^9.0.2          # For GPS functions
   flutter_polyline_points: ^1.0.0 # For drawing routes
 
 dev_dependencies:
