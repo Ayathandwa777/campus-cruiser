@@ -38,4 +38,4 @@ dependencies:
   flutter_polyline_points: ^2.1.0 # For drawing routes
 
 dev_dependencies:
-  flutter_lints: ^5.0.0
+  flutter_lints: ^2.0.0
