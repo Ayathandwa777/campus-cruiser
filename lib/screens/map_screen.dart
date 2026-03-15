@@ -16,6 +16,7 @@ import 'package:campus_cruiser/services/auth_services.dart';
 import 'package:campus_cruiser/services/firestore_service.dart';
 import 'package:campus_cruiser/data/route_data.dart'; // Route coordinates
 import 'package:campus_cruiser/data/stops_data.dart'; // Stop coordinates
+import 'package:campus_cruiser/screens/driver_screen.dart';
 
 // --- THE WIDGET DEFINITION ---
 class MapScreen extends StatefulWidget {
@@ -190,7 +191,7 @@ class _MapScreenState extends State<MapScreen> {
      WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Welcome to UniVerse!'), duration: Duration(seconds: 3)),
+          const SnackBar(content: Text('Welcome to UniVerseGo!'), duration: Duration(seconds: 3)),
         );
       }
     });
@@ -205,10 +206,18 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Vulumzi Live Map'),
-        actions: [
-          IconButton(icon: const Icon(Icons.logout), onPressed: signOut),
-        ],
+        title: const Text('UniVerseGo Live Map'),
+        actions:  [
+  IconButton(
+    icon: const Icon(Icons.directions_bus),
+    onPressed: () => Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const DriverScreen()),
+    ),
+  ),
+  IconButton(icon: const Icon(Icons.logout), onPressed: signOut),
+],
+        
       ),
       
       // We use a STACK to float the Info Card on top of the Map.
